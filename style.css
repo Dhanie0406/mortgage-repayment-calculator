@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --rounded-wrap: 1.5rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-color: hsl(202, 55%, 16%);
+  list-style: none;
+}
+
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+body {
+  background-color: hsl(202, 86%, 94%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrap {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  width: 64rem;
+  border-radius: var(--rounded-wrap);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.calculator-box {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 20px;
+  border-top-left-radius: var(--rounded-wrap);
+  border-bottom-left-radius: var(--rounded-wrap);
+}
+
+.calculator-box .mortgage-calculator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.calculator-box div:first-child h2 {
+  color: hsl(202, 55%, 16%);
+}
+
+.calculator-box div:first-child a {
+  color:   hsl(200, 26%, 54%);
+
+}
+.calculator-box div:first-child a:hover {
+  color: hsl(202, 55%, 16%);
+}
+
+.calculator-box form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-left: 0.5rem;
+}
+
+.calculator-box form .mortgage-amount {
+  grid-column: span 2;
+}
+.calculator-box form .mortgage-amount label {
+  color: hsl(202, 55%, 16%) ;
+  opacity: 90%;
+  padding-top: 1rem;
+
+}
+
+.calculator-box form label {
+  color: hsl(202, 55%, 16%) ;
+  opacity: 90%;
+  
+
+}
+.calculator-box form button {
+  grid-column: span 2;
+}
+
+.input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width:100%;
+}
+
+.input-label div {
+  width: 100%;
+  display: flex;
+  border: 1px solid hsl(203, 41%, 72%);
+  /* align-items: center; */
+}
+
+.input-label input[type="number"] {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: none;
+  padding: 0.6rem 0;
+}
+
+.input-label input[type="number"]:focus {
+  outline: none;
+}
+
+.input-label span {
+  padding: 10px 10px;
+  
+  background-color: hsl(202, 86%, 94%);
+}
+
+
+.calculator-box form .mortgage-type {
+  width: 100%;
+  grid-column: span 2;
+}
+.radio-container{
+  width: 100%;
+  gap:10px;
+  padding: 10px;
+  color:  hsl(202, 55%, 16%);
+  
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 15px;
+  border-radius: 50px;
+  width: 70%;
+  background-color: hsl(61, 70%, 52%);
+  border-style: none;
+  margin: 20px;
+  color:  hsl(202, 55%, 16%);
+}
+
+.result-box {
+  background-color: hsl(202, 55%, 16%);
+  width: 100%;
+  padding: 20px;
+  border-top-right-radius: var(--rounded-wrap);
+  border-bottom-right-radius: var(--rounded-wrap);
+  border-bottom-left-radius: 4.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.result-box div {
+  gap: 1rem;
+  text-align: center;
+}
+
+.result-box p {
+  color: hsl(200, 24%, 40%);
+}
+
+
+  
+
+  .calculator-box form .mortgage-amount div:hover{
+    border: 1px solid black;
+  }
+
+  .radio-container:hover {
+    border: 1px solid hsl(61, 70%, 52%);
+  }
+
+  button:hover {
+    background-color: lightyellow;
+  }
+
+
+@media (max-width:375px)   {
+.wrap {
+  display:grid;
+  grid-column: ifr;
+  border: none;
+  
+height: fit-content;
+}
+.calculator-box  {
+  border-radius: 0;
+}
+
+.result-box {
+  border-radius: 0;
+}
+.calculator-box .mortgage-calculator {
+  display: inline-block;
+  
+}
+.mortgage-calculator h2{
+  padding-bottom: 5px;
+  padding-top: 7px;
+}
+
+.calculator-box form {
+  width: 100%;
+  display:inline-block ;
+}
+.input-label {
+  padding-bottom: 1rem;
+}
+
+
+}
